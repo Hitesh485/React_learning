@@ -12,8 +12,23 @@ function App() {
 
   const addValue = () => {
     // counter++;
-    setCounter(++counter);
-    console.log(counter);
+    // setCounter(counter+1);
+    // now what happend if we add multiple counters
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+
+    // if we done this way then only set one counter at a time.
+    // now, in setCounter we get a callback function which describe the existing state.
+
+
+    // here prevCounter nothing but actually a counter itself but, for better understanding we write as prevCounter... this prevCounter hold prev value of state i.e. counter.
+
+    // here call back fun -> () => {} like this but {} have to remove varna return krni padegi value. this concept is in classic js.
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
+    // now increase value upto 3x times
   }
   
   const removeVal = () =>{
